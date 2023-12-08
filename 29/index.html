@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <style>
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin: 50px auto;
+        gap: 20px;
+      }
+      .form__label {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form__button:hover {
+        cursor: pointer;
+      }
+    </style>
+    <form class="form">
+      <label class="form__label">
+        Имя:
+        <input type="text" class="form__input form__input_type_name" />
+      </label>
+      <label class="form__label">
+        Фамилия:
+        <input type="text" class="form__input form__input_type_surname" />
+      </label>
+      <label class="form__label">
+        Email:
+        <input type="email" class="form__input form__input_type_email" />
+      </label>
+      <button type="submit" class="form__button">Отправить</button>
+    </form>
+    <script src="./form.js "></script>
+  </body>
+</html>

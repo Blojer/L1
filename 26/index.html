@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursive</title>
+  </head>
+  <body>
+    <style>
+      .tex {
+        max-width: 500px;
+        margin: 50px auto;
+      }
+    </style>
+    <ul class="tex">
+      <h1>Технологии:</h1>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>React</li>
+    </ul>
+    <script>
+      const element = document.querySelector('.tex');
+
+      // Функция для вывода тега в консоль
+      function recursive(node) {
+        // Выводим тег в консоль
+        console.log(node);
+        // Проходимся циклом по всем дочерним элементам
+        for (let i = 0; i < node.children.length; i++) {
+          // Вызывыем функцию внутри функции
+          recursive(node.children[i]);
+        }
+      }
+
+      recursive(element);
+    </script>
+  </body>
+</html>
